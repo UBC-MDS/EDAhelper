@@ -71,3 +71,7 @@ Before you submit a pull request, check that it meets these guidelines:
 
 Please note that the `DSCI_524_Group_5` project is released with a 
 Code of Conduct. By contributing to this project you agree to abide by its terms.
+
+## Attribution
+
+These contributing guidelines were adapted from the [].
