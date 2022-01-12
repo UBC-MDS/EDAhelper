@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "DSCI_524_Group_5"
-version = "0.0.0"
-description = "DSCI_524 Package"
-authors = ["Rowan Sivanandam"]
-license = "None"
+name = "EDAhelper"
+version = "0.1.0"
+description = "Toolset to make EDA easier!"
+authors = ["Rowan Sivanandam, Steven Leung, Vera Cui, Jennifer Hoang"]
+license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.7"
 
 [tool.poetry.dev-dependencies]
 

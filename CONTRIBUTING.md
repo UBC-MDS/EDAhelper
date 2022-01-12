@@ -40,10 +40,10 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `DSCI_524_Group_5` for local development.
+Ready to contribute? Here's how to set up `EDAhelper` for local development.
 
-1. Download a copy of `DSCI_524_Group_5` locally.
-2. Install `DSCI_524_Group_5` using `poetry`:
+1. Download a copy of `EDAhelper` locally.
+2. Install `EDAhelper` using `poetry`:
 
     ```console
     $ poetry install
@@ -69,5 +69,5 @@ Before you submit a pull request, check that it meets these guidelines:
 
 ## Code of Conduct
 
-Please note that the `DSCI_524_Group_5` project is released with a 
+Please note that the `EDAhelper` project is released with a 
 Code of Conduct. By contributing to this project you agree to abide by its terms.

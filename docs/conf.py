@@ -6,9 +6,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u"DSCI_524_Group_5"
-copyright = u"2022, Rowan Sivanandam"
-author = u"Rowan Sivanandam"
+project = u"EDAhelper"
+copyright = u"2022, Rowan Sivanandam, Steven Leung, Vera Cui, Jennifer Hoang"
+author = u"Rowan Sivanandam, Steven Leung, Vera Cui, Jennifer Hoang"
 
 # -- General configuration ---------------------------------------------------
 

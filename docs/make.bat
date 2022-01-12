@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=DSCI_524_Group_5
+set SPHINXPROJ=EDAhelper
 
 if "%1" == "" goto help
 
