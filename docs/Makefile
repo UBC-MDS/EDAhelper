@@ -3,7 +3,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = DSCI_524_Group_5
+SPHINXPROJ    = EDAhelper
 SOURCEDIR     = .
 BUILDDIR      = _build
 
