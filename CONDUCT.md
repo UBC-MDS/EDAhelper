@@ -25,10 +25,10 @@ Examples of unacceptable behavior by participants include:
 ## Our Responsibilities
 
 Our team members are committed to ensuring an inclusive environment and addressing any behaviour that does not align with the Code of Conduct. Our team members currently include:
-    - Rowan Sivanandam
-    - Steven Leung
-    - Vera Cui
-    - Jennifer Hoang
+* Rowan Sivanandam
+* Steven Leung
+* Vera Cui
+* Jennifer Hoang
 
 We as project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
 
