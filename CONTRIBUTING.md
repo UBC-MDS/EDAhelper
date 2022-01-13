@@ -7,7 +7,7 @@ helps, and credit will always be given.
 
 ### Report Bugs
 
-If you are reporting a bug, please include:
+If you are reporting a bug, please open an issue and include:
 
 * Your operating system name and version.
 * Any details about your local setup that might be helpful in troubleshooting.
@@ -40,10 +40,10 @@ If you are proposing a feature:
 
 ## Get Started!
 
-Ready to contribute? Here's how to set up `DSCI_524_Group_5` for local development.
+Ready to contribute? Here's how to set up `EDAhelper` for local development.
 
-1. Download a copy of `DSCI_524_Group_5` locally.
-2. Install `DSCI_524_Group_5` using `poetry`:
+1. Download a copy of `EDAhelper` locally.
+2. Install `EDAhelper` using `poetry`:
 
     ```console
     $ poetry install
@@ -69,9 +69,8 @@ Before you submit a pull request, check that it meets these guidelines:
 
 ## Code of Conduct
 
-Please note that the `DSCI_524_Group_5` project is released with a 
-Code of Conduct. By contributing to this project you agree to abide by its terms.
+Please note that the `EDAhelper` project is released with a Code of Conduct. By contributing to this project you agree to abide by its terms.
 
 ## Attribution
 
-These contributing guidelines were adapted from the [].
+These contributing guidelines were created with [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
