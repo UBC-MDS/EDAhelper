@@ -1,5 +1,5 @@
 import pandas as pd
-import Altair as alt
+import altair as alt
 
 
 def numeric_plots(df, ncols=5):
@@ -52,6 +52,5 @@ def numeric_plots(df, ncols=5):
     )
 
     return splom
-
 
 print(numeric_plots.__doc__)
