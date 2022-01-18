@@ -25,8 +25,6 @@ def numeric_plots(df):
         raise TypeError("'df' should be of type 'pandas.DataFrame'.")
 
     numeric_cols = df.select_dtypes(include=['float64', 'int64'])
-    print("df.shape[1]=", df.shape[1])
-    print("numeric_cols.shape[1]=", df.shape[1])
 
     splom = alt.Chart(numeric_cols).mark_point(opacity=0.3, size=10).encode(
         alt.X(
