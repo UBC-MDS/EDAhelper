@@ -14,7 +14,7 @@ def numeric_plots(df):
 
     Returns:
         splom: Altair chart object
-        the object for the plots
+        The Altair object for the plots
     """
 
     # Data validation
@@ -22,6 +22,8 @@ def numeric_plots(df):
         raise TypeError("'df' should be of type 'pandas.DataFrame'.")
 
     numeric_cols = df.select_dtypes(include=['float64', 'int64'])
+    print("df.shape[1]=", df.shape[1])
+    print("numeric_cols.shape[1]=", df.shape[1])
 
     splom = alt.Chart(numeric_cols).mark_point(opacity=0.3, size=10).encode(
         alt.X(
@@ -38,8 +40,8 @@ def numeric_plots(df):
         width=120,
         height=120
     ).repeat(
-        column=list(df.columns),
-        row=list(df.columns)
+        column=list(numeric_cols.columns),
+        row=list(numeric_cols.columns)
     ).configure_axis(
         labelFontSize=8,
         titleFontSize=8
