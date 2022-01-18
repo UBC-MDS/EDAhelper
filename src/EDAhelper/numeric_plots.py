@@ -15,6 +15,9 @@ def numeric_plots(df):
     Returns:
         splom: Altair chart object
         The Altair object for the plots
+
+    Example:
+        splom = numeric_plot(df) 
     """
 
     # Data validation
