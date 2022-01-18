@@ -25,6 +25,19 @@ def column_stats(data, columns):
   >>> column_stats(df, columns = ('Date', PctPopulation', 'CrimeRatePerPop'))
   >>>
   """
+    if not isinstance(columns, (list, tuple, np.ndarray)):
+        raise TypeError("'columns' should be a list, tuple, or array")
+    for column in columns:
+        if not isinstance(column, str):
+            raise TypeError("item in columns should be of type string")
+    if not isinstance(data, pd.DataFrame):
+        raise TypeError("data should be a DataFrame")
+        
+    for column in columns:
+        for row in data[column]:
+            if isinstance(row, str):
+                raise TypeError("values should be of type integer")
+    
     
     statsdict = {'Column': [], 'Count': [], 'Mean': [], 'Median': [], 'Mode': [], 'Q1': [], 'Q3': [], 'Var': [], 'Stdev': []}
     for column in columns:
