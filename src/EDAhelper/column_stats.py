@@ -1,9 +1,9 @@
 import pandas as pd
 
-def column_stats(data, columns = None):
+def column_stats(data, columns):
     """
   Obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3, 
-  variance, standard deviation, correlation.... (add more if required) in table format.
+  variance, standard deviation, correlation, and covariance in table format.
 
   Parameters
   -------------
@@ -11,8 +11,9 @@ def column_stats(data, columns = None):
   data: array_like
            The data set from which columns will be selected
 
-  columns: string vector
-            Columns for which to obtain summary stats and correlation (if > 1 column arguments used)
+  columns: vector of strings
+            Columns for which to obtain summary stats, correlation matrix, and covariance matrix
+            (if > 1 column arguments used)
 
   Returns
   -------------
@@ -21,7 +22,7 @@ def column_stats(data, columns = None):
 
   Examples
   -------------
-  >>> column_stats(df, columns = c('Date', PctPopulation', 'CrimeRatePerPop'))
+  >>> column_stats(df, columns = ('Date', PctPopulation', 'CrimeRatePerPop'))
   >>>
   """
     
