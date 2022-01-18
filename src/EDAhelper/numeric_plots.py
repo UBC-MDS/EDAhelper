@@ -1,5 +1,5 @@
 import pandas as pd
-import Altair as alt
+import altair as alt
 
 
 def numeric_plots(df, ncols=5):
