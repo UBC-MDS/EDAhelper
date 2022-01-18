@@ -53,5 +53,4 @@ def numeric_plots(df, ncols=5):
 
     return splom
 
-
 print(numeric_plots.__doc__)
