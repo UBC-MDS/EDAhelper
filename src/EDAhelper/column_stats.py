@@ -26,7 +26,7 @@ def column_stats(data, columns):
   >>>
   """
     
-      statsdict = {'Column': [], 'Count': [], 'Mean': [], 'Median': [], 'Mode': [], 'Q1': [], 'Q3': [], 'Var': [], 'Stdev': []}
+    statsdict = {'Column': [], 'Count': [], 'Mean': [], 'Median': [], 'Mode': [], 'Q1': [], 'Q3': [], 'Var': [], 'Stdev': []}
     for column in columns:
         statsdict['Column'].append(column)
         statsdict['Count'].append(round(float(data[column].describe().loc['count']), 3))
@@ -37,14 +37,13 @@ def column_stats(data, columns):
         statsdict['Q3'].append(round(float(data[column].describe().loc['75%']), 3))
         statsdict['Var'].append(round(data[column].var(), 3))
         statsdict['Stdev'].append(round(data[column].std(), 3))
-    return pd.DataFrame.from_dict(statsdict)
+        
 
     cols = []
     for column in columns:
         cols.append(column)
         
     covmatrix = pd.DataFrame(data, columns = cols)
-    return covmatrix.cov()
 
     corrmatrix = pd.DataFrame(data, columns = cols)   
-    return corrmatrix.corr()
+    return pd.DataFrame.from_dict(statsdict), corrmatrix.corr(), covmatrix.cov()
