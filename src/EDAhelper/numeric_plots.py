@@ -27,7 +27,11 @@ def numeric_plots(df, ncols=5):
     if not isinstance(ncols, int):
         raise TypeError("'ncols' should be of type 'int'.")
 
-    splom = []
+    n_pages = int(df.shape[1] / ncols)
+    if (df.shape[1] % ncols > 0):
+        n_pages += 1
+
+    splom = [None] * n_pages
 
     splom[0] = alt.Chart(df).mark_point(opacity=0.3, size=10).encode(
         alt.X(
@@ -52,5 +56,6 @@ def numeric_plots(df, ncols=5):
     )
 
     return splom
+
 
 print(numeric_plots.__doc__)
