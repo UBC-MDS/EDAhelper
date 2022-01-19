@@ -17,12 +17,26 @@ def df():
 
 
 def test_numeric_plots():
-    actual = numeric_plots(df())
+    actual_obj = numeric_plots(df())
 
     # Check that the return value is a list of objects
     assert isinstance(
-        actual, alt.vegalite.v4.api.RepeatChart), "The return value should be an Altair plot object."
+        actual_obj, alt.vegalite.v4.api.RepeatChart), "The return value should be an Altair plot object."
 
+    # Unit test case 1: 
+    expected_1 = 5
+    actual_1 = len(actual_obj.spec._kwds['data'].columns)
+    assert expected_1 == actual_1, "The number of columns in the dataframe is are incorrect."
+
+    # Unit test case 2
+    expected_2 = df().select_dtypes(include=['float64', 'int64']).columns
+    actual_2 = actual_obj._kwds['repeat'].row
+    assert set(expected_2) == set(actual_2), "The rows in the repeated plots are incorrect."
+
+    # Unit test case 3
+    expected_3 = expected_2
+    actual_3 = actual_obj._kwds['repeat'].column
+    assert set(expected_3) == set(actual_3), "The columns in the repeated plots are incorrect."
 
 def test_numeric_plots_error():
     """Check TypeError raised when any of the argument type is wrong."""
