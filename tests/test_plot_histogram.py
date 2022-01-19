@@ -1,4 +1,4 @@
-from EDAhelper.EDAhelper import plot_histogram
+from EDAhelper.plot_histogram import plot_histogram
 import pandas as pd
 import pytest
 import altair as alt
