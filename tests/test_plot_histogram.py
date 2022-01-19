@@ -18,7 +18,9 @@ def test_plot_histogram():
     """Test plot_histogram on a dataframe."""
     # Case 1: Test default settings and return
     result = plot_histogram(df())
-    assert isinstance(result, alt.Chart, "Altair Chart object should be returned.")
+    assert isinstance(
+        result, alt.vegalite.v4.api.RepeatChart
+    ), "Altair Chart object should be returned."
 
     # Case 2: Test erroneous inputs
     with pytest.raises(Exception):
