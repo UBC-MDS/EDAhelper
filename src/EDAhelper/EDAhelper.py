@@ -25,7 +25,7 @@ def preprocess(path, method=None, fill_value=None, read_func=pd.read_csv, **kwar
         If 'constant', then replace missing values with fill_value.
 
     fill_value : {None, numerical values}, default=None
-        When method of the column =='constant', fill_value is used to replace all occurrences of missing values.
+        When method='constant', fill_value is used to replace all occurrences of missing values.
         If left to the default, fill_value will be 0 when imputing numerical data.
 
     read_func : panadas.read_* function name, default=pandas.read_csv
