@@ -31,3 +31,4 @@ def test_plot_histogram():
 
     with pytest.raises(Exception):
         plot_histogram(df(), num_bins = "ten")
+        
