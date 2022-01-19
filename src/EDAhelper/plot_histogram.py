@@ -2,17 +2,17 @@ import pandas as pd
 import altair as alt
 
 
-def plot_histogram(data, columns = [], num_bins = 30):
+def plot_histogram(data, columns=["all"], num_bins=30):
     """
     Creates histograms for numerical features within a dataframe using Altair.
     Parameters
     ----------
     data : pd.DataFrame
         A pandas dataframe
-    columns : list, optional
+    columns : list, default=["all"]
         A list of numerical features for which to create histograms, or by
         default will plot all numerical features in dataframe.
-    num_bins : integer, optional
+    num_bins : integer, default=30
         Number of bins in histogram plot, default is 30 bins.
     Returns
     ------
@@ -37,7 +37,7 @@ def plot_histogram(data, columns = [], num_bins = 30):
     if not isinstance(num_bins, int):
         raise TypeError("'num_bins' should be an integer")
         
-    if columns == []:
+    if columns == ["all"]:
         numeric_cols = list(data.select_dtypes("number"))
     else:
         numeric_cols = columns
