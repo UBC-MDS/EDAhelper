@@ -8,7 +8,7 @@ This package is aimed at making the EDA process more effective. Basically, we fo
 
   1. Clean the data and replace missing values by using the method preferred.
   2. Provide the description of the data such as the distribution of each column of the data.
-  3. Give the correlation plot between different columns and omit the pairs that are not significantly correlated.
+  3. Give the correlation plot between different numeric columns automatically.
   4. Combine the plots and make them suitable for the report.
 
 ## Contributors
