@@ -21,12 +21,14 @@ def test_plot_histogram():
     assert isinstance(
         result, alt.vegalite.v4.api.RepeatChart
     ), "Altair RepeatChart object should be returned."
+    assert result.spec._kwds['mark'] == 'bar', "Altair mark should be 'bar'"
 
     # Case 2: Test non-default settings and return
     result = plot_histogram(df(), ['A', 'B', 'C'], num_bins = 40)
     assert isinstance(
         result, alt.vegalite.v4.api.RepeatChart
     ), "Altair RepeatChart object should be returned."
+    assert result.spec._kwds['mark'] == 'bar', "Altair mark should be 'bar'"
 
     # Case 3: Test erroneous inputs
     with pytest.raises(Exception):
