@@ -25,7 +25,7 @@ def preprocess(path, method=None, fill_value=None, read_func=pd.read_csv, **kwar
         If 'constant', then replace missing values with fill_value.
 
     fill_value : {None, numerical values}, default=None
-        When method of the column =='constant', fill_value is used to replace all occurrences of missing values.
+        When method='constant', fill_value is used to replace all occurrences of missing values.
         If left to the default, fill_value will be 0 when imputing numerical data.
 
     read_func : panadas.read_* function name, default=pandas.read_csv
@@ -49,8 +49,8 @@ def preprocess(path, method=None, fill_value=None, read_func=pd.read_csv, **kwar
     # Input check
     if not isinstance(path, str):
         raise Exception('Err msg: wrong path input')
-    if method not in (None, 'mean', 'median', 'most_frequent', 'constant'):
-        raise Exception('Err msg: wrong method input')
+    # if method not in (None, 'mean', 'median', 'most_frequent', 'constant'):
+    #     raise Exception('Err msg: wrong method input')
     if (method == 'constant') & (fill_value is not None) & (not isinstance(fill_value, (float, int))):
         raise Exception("Err msg: wrong fill_value input when method = 'constant'")
 
@@ -76,6 +76,8 @@ def preprocess(path, method=None, fill_value=None, read_func=pd.read_csv, **kwar
             elif method == 'constant':
                 if fill_value:
                     val_filled = fill_value
+            else:
+                raise Exception('Err msg: wrong method input')
 
             df.loc[df[col].isnull(), col] = val_filled
 
