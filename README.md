@@ -20,11 +20,11 @@ This package is aimed at making the EDA process more effective. Basically, we fo
 
 ## Feature specifications
 
-  1. `preprocess(path, method='most_frequent', fill_value = None)` : <br>
+  1. `preprocess(path, method=None, fill_value=None, read_func=pd.read_csv, **kwarg)` : <br>
   The function is to preprocess data in txt or csv by dealing with missing values. There are 5 imputation methods provided (None, 'most_frequent', 'mean', 'median', 'constant'). Finally, it will return the processed data as pandas.DataFrame.
   2. `column_stats(data, column1, column2 = None, column3 = None, column4 = None)` : <br>
   The function is to obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3, variance, standard deviation, correlation. Finally, it will return summary table detailing all statistics and correlations between chosen columns.
-  3. `plot_histogram(data, columns)` : <br>
+  3. `plot_histogram(data, columns=["all"], num_bins=30)`: : <br>
   The function is to create histograms for numerical features within a dataframe using Altair. Finally, it will return an Altair plot for each specified continuous feature.
   4. `numeric_plots(df, column_names=None, ncols=5)` : <br>
   The function takes a dataframes and plot the possible pairs of the numeric columns using Altair, creating a matrix of correlation plots.
