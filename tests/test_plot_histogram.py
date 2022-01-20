@@ -20,9 +20,15 @@ def test_plot_histogram():
     result = plot_histogram(df())
     assert isinstance(
         result, alt.vegalite.v4.api.RepeatChart
-    ), "Altair Chart object should be returned."
+    ), "Altair RepeatChart object should be returned."
 
-    # Case 2: Test erroneous inputs
+    # Case 2: Test non-default settings and return
+    result = plot_histogram(df(), ['A', 'B', 'C'], num_bins = 40)
+    assert isinstance(
+        result, alt.vegalite.v4.api.RepeatChart
+    ), "Altair RepeatChart object should be returned."
+
+    # Case 3: Test erroneous inputs
     with pytest.raises(Exception):
         plot_histogram([1, 2, 3])
 
