@@ -51,6 +51,9 @@ Example usage:
 ```python
 from EDAhelper import EDAhelper
 EDAhelper.preprocess('file_path')
+EDAhelper.column_stats(df, columns = ('Date', PctPopulation', 'CrimeRatePerPop'))
+EDAhelper.plot_histogram(df, columns = ['A', 'B'])
+EDAhelper.numeric_plot(df) 
 ```
 
 ## Contributing
