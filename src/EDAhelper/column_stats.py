@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+import statistics
 
 def column_stats(data, columns):
     """
@@ -45,7 +47,7 @@ def column_stats(data, columns):
         statsdict['Count'].append(round(float(data[column].describe().loc['count']), 3))
         statsdict['Mean'].append(round(float(data[column].describe().loc['mean']), 3))
         statsdict['Median'].append(round(float(data[column].describe().loc['50%']), 3))
-        statsdict['Mode'].append(round(float(data[column].mode()), 3))
+        statsdict['Mode'].append(statistics.mode(data[column]))
         statsdict['Q1'].append(round(float(data[column].describe().loc['25%']), 3))
         statsdict['Q3'].append(round(float(data[column].describe().loc['75%']), 3))
         statsdict['Var'].append(round(data[column].var(), 3))
