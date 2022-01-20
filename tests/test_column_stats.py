@@ -3,7 +3,7 @@ import numpy as np
 import statistics
 from EDAhelper.column_stats import column_stats
 
-data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
+iris = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
 
 '''
 Checking statistics are calculated correctly by the function and both matrices have correct values
