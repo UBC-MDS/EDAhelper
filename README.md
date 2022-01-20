@@ -42,7 +42,7 @@ Surely, EDA is not a new topic to data scientists. There are quite a few package
 ## Installation
 
 ```bash
-$ pip install EDAhelper
+$ pip install git+https://github.com/UBC-MDS/EDAhelper.git
 ```
 
 ## Usage
