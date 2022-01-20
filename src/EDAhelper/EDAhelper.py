@@ -49,8 +49,8 @@ def preprocess(path, method=None, fill_value=None, read_func=pd.read_csv, **kwar
     # Input check
     if not isinstance(path, str):
         raise Exception('Err msg: wrong path input')
-    if method not in (None, 'mean', 'median', 'most_frequent', 'constant'):
-        raise Exception('Err msg: wrong method input')
+    # if method not in (None, 'mean', 'median', 'most_frequent', 'constant'):
+    #     raise Exception('Err msg: wrong method input')
     if (method == 'constant') & (fill_value is not None) & (not isinstance(fill_value, (float, int))):
         raise Exception("Err msg: wrong fill_value input when method = 'constant'")
 
@@ -76,6 +76,8 @@ def preprocess(path, method=None, fill_value=None, read_func=pd.read_csv, **kwar
             elif method == 'constant':
                 if fill_value:
                     val_filled = fill_value
+            else:
+                raise Exception('Err msg: wrong method input')
 
             df.loc[df[col].isnull(), col] = val_filled
 
