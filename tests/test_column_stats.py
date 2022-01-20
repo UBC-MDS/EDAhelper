@@ -17,25 +17,22 @@ def variance(data):
 
 cols = ('petal_width', 'petal_length')
 
-def column_args_in_outputs:
+def test_column_args_in_outputs:
     assert column_stats(iris, cols)[1][cols[1]].index[0] == cols[0], 'Column names do not match'
     assert column_stats(iris, cols)[1][cols[1]].index[1] == cols[1], 'Column names do not match'
     assert column_stats(iris, cols)[2][cols[1]].index[0] == cols[0], 'Column names do not match'
     assert column_stats(iris, cols)[2][cols[1]].index[1] == cols[1], 'Column names do not match'
     
 
-def column_values_calculated:
+def test_column_values_calculated:
     assert column_stats(iris, cols)[0]['Mean'][0] == round(iris['petal_width'].sum()/iris['petal_width'].count(), 3), 'Incorrect Mean calculation'
     assert column_stats(iris, cols)[0]['Var'][0] - 0.5 <= variance(iris['petal_width']) <= column_stats(iris, ('petal_width', 'petal_length'))[0]['Var'][0] + 0.5, 'Incorrect Median Calculation'
     
-def cov_matrix_diag:
+def test_cov_matrix_diag:
     assert column_stats(iris, cols)[1]['petal_width'][0] == 1, 'Covariance calculated incorrectly'
     assert column_stats(iris, cols)[1]['petal_length'][1] == 1, 'Covariance calculated incorrectly'
 
-'''
-Checking all dataframes have same number of rows as number of specified columns in function
-'''
-def num_cols:
+def test_num_cols:
     assert len(column_stats(iris, cols)[0].columns) == 9
     assert len(cols) == len(column_stats(iris, cols)[0])
     assert len(cols) == len(column_stats(iris, cols)[1])
