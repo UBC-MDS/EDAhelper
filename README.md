@@ -41,8 +41,11 @@ Surely, EDA is not a new topic to data scientists. There are quite a few package
 
 ## Installation
 
+You can also use Git to clone the repository from GitHub to install the latest development version:
 ```bash
-$ pip install git+https://github.com/UBC-MDS/EDAhelper.git
+$ git clone https://github.com/UBC-MDS/EDAhelper.git
+$ cd dist
+$ pip install EDAhelper-1.0.0-py3-none-any.whl
 ```
 
 ## Usage
