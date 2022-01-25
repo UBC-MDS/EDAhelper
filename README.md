@@ -26,7 +26,7 @@ This package is aimed at making the EDA process more effective. Basically, we fo
   The function is to obtain summary statistics of column(s) including count, mean, median, mode, Q1, Q3, variance, standard deviation, correlation. Finally, it will return summary table detailing all statistics and correlations between chosen columns.
   3. `plot_histogram(data, columns=["all"], num_bins=30)`: : <br>
   The function is to create histograms for numerical features within a dataframe using Altair. Finally, it will return an Altair plot for each specified continuous feature.
-  4. `numeric_plots(df, column_names=None, ncols=5)` : <br>
+  4. `numeric_plots(df)` : <br>
   The function takes a dataframes and plot the possible pairs of the numeric columns using Altair, creating a matrix of correlation plots.
 
   
@@ -41,8 +41,11 @@ Surely, EDA is not a new topic to data scientists. There are quite a few package
 
 ## Installation
 
+You can also use Git to clone the repository from GitHub to install the latest development version:
 ```bash
-$ pip install EDAhelper
+$ git clone https://github.com/UBC-MDS/EDAhelper.git
+$ cd dist
+$ pip install EDAhelper-1.0.0-py3-none-any.whl
 ```
 
 ## Usage
@@ -51,6 +54,9 @@ Example usage:
 ```python
 from EDAhelper import EDAhelper
 EDAhelper.preprocess('file_path')
+EDAhelper.column_stats(df, columns = ('Date', PctPopulation', 'CrimeRatePerPop'))
+EDAhelper.plot_histogram(df, columns = ['A', 'B'])
+EDAhelper.numeric_plot(df) 
 ```
 
 ## Contributing

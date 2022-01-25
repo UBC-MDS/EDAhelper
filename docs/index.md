@@ -6,6 +6,7 @@
 :hidden:
 
 example.ipynb
+example_preprocess.ipynb
 changelog.md
 contributing.md
 conduct.md
