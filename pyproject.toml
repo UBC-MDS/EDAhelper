@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "EDAhelper"
-version = "0.1.0"
+version = "2.0.0"
 description = "Toolset to make EDA easier!"
 authors = ["Rowan Sivanandam, Steven Leung, Vera Cui, Jennifer Hoang"]
 license = "MIT"
@@ -17,6 +17,9 @@ jupyter = "^1.0.0"
 myst-nb = "^0.13.1"
 sphinx-autoapi = "^1.8.4"
 sphinx-rtd-theme = "^1.0.0"
+Sphinx = "^4.4.0"
+nbsphinx = "^0.8.8"
+ipykernel = "^6.7.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
