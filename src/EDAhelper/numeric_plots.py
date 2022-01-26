@@ -2,7 +2,8 @@ import pandas as pd
 import altair as alt
 
 def numeric_plots(df):
-    """Creating a matrix of correlation plots with the numeric features.
+    """
+    Creating a matrix of correlation plots with the numeric features.
 
     Parameters
     ----------
