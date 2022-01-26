@@ -1,23 +1,23 @@
 import pandas as pd
 import altair as alt
 
-
 def numeric_plots(df):
-    """
-    Takes a dataframe and plot the possible pairs of the numeric columns using Altair, 
-    creating a matrix of correlation plots. The function will automatically avoid all 
-    non-numeric features.
+    """Creating a matrix of correlation plots with the numeric features.
 
-    Parameters:
-        df: pandas.dataframe): 
-            a pandas dataframe
+    Parameters
+    ----------
+        df: pandas.dataframe
+            A pandas dataframe
 
-    Returns:
+    Returns
+    -------
         splom: Altair chart object
         The Altair object for the plots
 
-    Example:
-        splom = numeric_plot(df) 
+    Example
+    -------
+    >>> from EDAhelper.numeric_plots import numeric_plots
+    >>> splom = numeric_plot(df) 
     """
 
     # Data validation
