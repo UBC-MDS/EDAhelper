@@ -8,9 +8,6 @@ readme = "README.md"
 homepage = "https://github.com/<github_username>/<github_repo>"
 repository = "https://github.com/<github_username>/<github_repo>"
 documentation = 'https://<package_name>.readthedocs.io'
-packages = [
-    { include = "EDAhelper", from = "src" }
-]
 
 [tool.poetry.dependencies]
 python = "^3.8"
