@@ -5,6 +5,9 @@ description = "Toolset to make EDA easier!"
 authors = ["Rowan Sivanandam, Steven Leung, Vera Cui, Jennifer Hoang"]
 license = "MIT"
 readme = "README.md"
+packages = [
+    { include = "EDAhelper", from = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.8"
