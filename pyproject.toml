@@ -1,13 +1,10 @@
 [tool.poetry]
 name = "EDAhelper"
-version = "2.0.0"
+version = "0.1.0"
 description = "Toolset to make EDA easier!"
 authors = ["Rowan Sivanandam, Steven Leung, Vera Cui, Jennifer Hoang"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/<github_username>/<github_repo>"
-repository = "https://github.com/<github_username>/<github_repo>"
-documentation = 'https://<package_name>.readthedocs.io'
 
 [tool.poetry.dependencies]
 python = "^3.8"
