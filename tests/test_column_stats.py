@@ -31,8 +31,8 @@ def test_column_values_calculated():
 def test_cov_matrix_diag():
     iris = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
     cols = ('petal_width', 'petal_length')
-    assert column_stats(iris, cols)[1]['petal_width'][0] == 1, 'Covariance calculated incorrectly'
-    assert column_stats(iris, cols)[1]['petal_length'][1] == 1, 'Covariance calculated incorrectly'
+    assert round(column_stats(iris, cols)[1]['petal_width'][0]) == 1, 'Covariance calculated incorrectly'
+    assert (column_stats(iris, cols)[1]['petal_length'][1]) == 1, 'Covariance calculated incorrectly'
 
 def test_num_cols():
     iris = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv')
