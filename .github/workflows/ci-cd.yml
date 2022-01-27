@@ -20,5 +20,5 @@ jobs:
       run: poetry install
     # Step 6. Run tests for package
     - name: Test python
-      run: python --version
+      run: python -c"import EDAhelper"
 
