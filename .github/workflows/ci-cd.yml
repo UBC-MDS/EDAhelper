@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, windows-latest]
-        python-version: 3.9
+
     steps:
     # Step 2. Set up Python 3.9
     - uses: actions/setup-python@v2
