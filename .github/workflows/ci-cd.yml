@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # Step 2. Set up Python 3.9
-    - uses: actions/setup-python
+    - uses: actions/setup-python@v1
       with:
         python-version: 3.9
     # Step 3. Check-out repository so we can access its contents
-    - uses: actions/checkout
+    - uses: actions/checkout@v1
     # Step 4. Install poetry
-    - uses: snok/install-poetry
+    - uses: snok/install-poetry@v1
     # Step 5. Install our package
     - name: Install package
       run: poetry install
