@@ -2,8 +2,18 @@
 import pandas as pd
 import numpy as np
 import statistics
+import pytest
 from EDAhelper.column_stats import column_stats
 
+def test_inputs():
+    with pytest.raises(Exception):
+        column_stats(data, columns = 'A')
+
+    with pytest.raises(Exception):
+        column_stats(data, columns = 1)
+
+    with pytest.raises(Exception):
+        column_stats(('a', 'b', 'c'), columns = ['A', 'B', 'C'])
 
 def variance(data):
     n = len(data)
