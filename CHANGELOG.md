@@ -2,6 +2,9 @@
 
 <!--next-version-placeholder-->
 
+## v3.1.1 (2022-01-28)
+
+
 ## v3.1.0 (2022-01-28)
 ### Feature
 * Numeric_plots.py now passes the validation tests. ([`086876b`](https://github.com/UBC-MDS/EDAhelper/commit/086876b013103d3990a049bc6e180f0960fc23f0))

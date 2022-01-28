@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "EDAhelper"
-version = "3.1.0"
+version = "3.1.1"
 description = "Toolset to make EDA easier!"
 authors = ["Rowan Sivanandam, Steven Leung, Vera Cui, Jennifer Hoang"]
 license = "MIT"
