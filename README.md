@@ -59,10 +59,16 @@ $ pip install edahelper
 
 Example usage:
 ```python
-from EDAhelper import EDAhelper
+from EDAhelper.preprocess import preprocess
 EDAhelper.preprocess('file_path')
+
+from EDAhelper.column_stats import column_stats
 EDAhelper.column_stats(df, columns = ('Date', 'PctPopulation', 'CrimeRatePerPop'))
+
+from EDAhelper.plot_histogram import plot_histogram
 EDAhelper.plot_histogram(df, columns = ['A', 'B'])
+
+from EDAhelper.numeric_plots import numeric_plots
 EDAhelper.numeric_plots(df) 
 ```
 
