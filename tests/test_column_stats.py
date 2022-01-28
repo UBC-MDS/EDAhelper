@@ -41,3 +41,4 @@ def test_num_cols():
     assert len(cols) == len(column_stats(iris, cols)[0])
     assert len(cols) == len(column_stats(iris, cols)[1])
     assert len(cols) == len(column_stats(iris, cols)[2])
+
