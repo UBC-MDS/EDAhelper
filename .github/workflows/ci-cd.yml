@@ -27,11 +27,11 @@ jobs:
     # Step 6. Run tests for package
     - name: Test with pytest
       run: poetry run pytest tests/ --cov=EDAhelper --cov-report=xml
-    # Step 7. Use Codecov to track coverage
-    - uses: codecov/codecov-action@v2
-      with:
-        files: ./coverage.xml   # coverage report
-        fail_ci_if_error: true  # terminate workflow if there's an error
+#     # Step 7. Use Codecov to track coverage
+#     - uses: codecov/codecov-action@v2
+#       with:
+#         files: ./coverage.xml   # coverage report
+#         fail_ci_if_error: true  # terminate workflow if there's an error
     # Step 8. Build documentation
     - name: Build documentation
       run: poetry run make html --directory docs/
