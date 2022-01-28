@@ -1,3 +1,5 @@
+
+   
 name: ci-cd
 
 on: [push, pull_request]
@@ -12,17 +14,24 @@ jobs:
 
     steps:
     # Step 2. Set up Python 3.9
-    - uses: actions/setup-python@v1
+    - uses: actions/setup-python@v2
       with:
         python-version: 3.9
     # Step 3. Check-out repository so we can access its contents
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     # Step 4. Install poetry
     - uses: snok/install-poetry@v1
     # Step 5. Install our package
     - name: Install package
       run: poetry install
     # Step 6. Run tests for package
-    - name: Test python
-      run: python -c"import EDAhelper"
-
+    - name: Test with pytest
+      run: poetry run pytest tests/ --cov=EDAhelper --cov-report=xml
+    # Step 7. Use Codecov to track coverage
+    - uses: codecov/codecov-action@v2
+      with:
+        files: ./coverage.xml   # coverage report
+        fail_ci_if_error: true  # terminate workflow if there's an error
+    # Step 8. Build documentation
+    - name: Build documentation
+      run: poetry run make html --directory docs/
