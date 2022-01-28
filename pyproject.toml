@@ -1,13 +1,12 @@
 [tool.poetry]
 name = "EDAhelper"
-version = "1.0.0"
+version = "3.0.0"
 description = "Toolset to make EDA easier!"
 authors = ["Rowan Sivanandam, Steven Leung, Vera Cui, Jennifer Hoang"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/<github_username>/<github_repo>"
-repository = "https://github.com/<github_username>/<github_repo>"
-documentation = 'https://<package_name>.readthedocs.io'
+repository = "https://github.com/UBC-MDS/EDAhelper.git"
+documentation = 'https://edahelper.readthedocs.io'
 packages = [
     { include="EDAhelper", from="./src" },
 ]
