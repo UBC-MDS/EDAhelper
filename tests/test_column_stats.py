@@ -10,7 +10,7 @@ def test_inputs():
         column_stats(data, columns = 'A')
 
     with pytest.raises(Exception):
-        column_stats(data, columns = 1)
+        column_stats(data, columns = [1, 2])
 
     with pytest.raises(Exception):
         column_stats(('a', 'b', 'c'), columns = ['A', 'B', 'C'])
