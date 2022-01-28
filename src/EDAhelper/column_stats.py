@@ -24,7 +24,7 @@ def column_stats(data, columns):
 
   Examples
   -------------
-  >>> column_stats(df, columns = ('Date', PctPopulation', 'CrimeRatePerPop'))
+  >>> column_stats(iris, ('sepal_width', 'petal_length'))
   >>>
   """
     if not isinstance(columns, (list, tuple, np.ndarray)):
