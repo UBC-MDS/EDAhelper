@@ -48,7 +48,11 @@ You can also use Git to clone the repository from GitHub to install the latest d
 ```bash
 $ git clone https://github.com/UBC-MDS/EDAhelper.git
 $ cd dist
-$ pip install EDAhelper-1.0.0-py3-none-any.whl
+$ pip install EDAhelper-3.0.0-py3-none-any.whl
+```
+or install from `TestPyPI`:
+```bash
+$ pip install -i https://test.pypi.org/simple/ edahelper
 ```
 
 ## Usage
