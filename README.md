@@ -50,9 +50,9 @@ $ git clone https://github.com/UBC-MDS/EDAhelper.git
 $ cd dist
 $ pip install EDAhelper-3.0.0-py3-none-any.whl
 ```
-or install from `TestPyPI`:
+or install from `PyPI`:
 ```bash
-$ pip install -i https://test.pypi.org/simple/ edahelper
+$ pip install edahelper
 ```
 
 ## Usage
