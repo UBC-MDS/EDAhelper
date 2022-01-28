@@ -1,4 +1,5 @@
 # EDAhelper
+[![Documentation Status](https://readthedocs.org/projects/edahelper/badge/?version=latest)](https://edahelper.readthedocs.io/en/latest/?badge=latest)
 
 Tools to make EDA easier!
 
