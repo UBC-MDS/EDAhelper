@@ -41,11 +41,7 @@ jobs:
     # Only run this job if new work is pushed to "master"
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     # Step 1. Set up operating system
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        #os: [macos-latest, windows-latest]
+    runs-on: ubuntu-latest
     steps:
     # Step 2. Set up Python 3.9
     - uses: actions/setup-python@v2
