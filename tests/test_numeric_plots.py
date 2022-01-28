@@ -30,7 +30,7 @@ def test_numeric_plots_unit_1():
     # Unit test case 1: 
     expected_1 = 5
     actual_1 = len(actual_obj.spec._kwds['data'].columns)
-    assert expected_1 == actual_1, "The number of columns in the dataframe is are incorrect."
+    assert expected_1 == actual_1, "The number of columns in the dataframe are incorrect."
 
 def test_numeric_plots_unit_2():
     """Unit test case 2"""
